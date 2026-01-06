@@ -1,6 +1,7 @@
 # Hello Wallpaper
 
 A macOS menu bar app for managing desktop wallpapers with automatic Light/Dark mode switching.
+<img width="1800" height="1104" alt="screenshot-20260106-155154" src="https://github.com/user-attachments/assets/8fd5c5fc-aac7-4dff-96a7-4b3d5d4f68c4" />
 
 ## Features
 
