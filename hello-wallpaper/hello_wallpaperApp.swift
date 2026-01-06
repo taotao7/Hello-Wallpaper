@@ -10,7 +10,7 @@ struct hello_wallpaperApp: App {
     @State private var wallpaperManager = WallpaperManager.shared
     
     var body: some Scene {
-        WindowGroup {
+        WindowGroup(id: "main") {
             WallpaperSearchView()
                 .frame(minWidth: 700, minHeight: 500)
         }
@@ -26,6 +26,7 @@ struct hello_wallpaperApp: App {
 
 struct MenuBarView: View {
     @State private var manager = WallpaperManager.shared
+    @Environment(\.openWindow) private var openWindow
     
     var body: some View {
         Text("Current: \(manager.currentAppearance == .dark ? "Dark" : "Light") Mode")
@@ -57,11 +58,12 @@ struct MenuBarView: View {
         }
         
         Button("Open Window") {
-            NSApp.activate(ignoringOtherApps: true)
-            for window in NSApp.windows where window.canBecomeMain {
+            if let window = NSApp.windows.first(where: { $0.identifier?.rawValue == "main" || $0.canBecomeMain }) {
                 window.makeKeyAndOrderFront(nil)
-                break
+            } else {
+                openWindow(id: "main")
             }
+            NSApp.activate(ignoringOtherApps: true)
         }
         
         Divider()

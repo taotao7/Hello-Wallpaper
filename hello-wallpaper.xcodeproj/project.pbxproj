@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		2B78BBBA2F0CE2D400D02E8A /* hello-wallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hello-wallpaper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B78BBBA2F0CE2D400D02E8A /* Hello Wallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hello Wallpaper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -40,7 +40,7 @@
 		2B78BBBB2F0CE2D400D02E8A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2B78BBBA2F0CE2D400D02E8A /* hello-wallpaper.app */,
+				2B78BBBA2F0CE2D400D02E8A /* Hello Wallpaper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,7 +67,7 @@
 			packageProductDependencies = (
 			);
 			productName = "hello-wallpaper";
-			productReference = 2B78BBBA2F0CE2D400D02E8A /* hello-wallpaper.app */;
+			productReference = 2B78BBBA2F0CE2D400D02E8A /* Hello Wallpaper.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -265,9 +265,9 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1.8;
+				MARKETING_VERSION = 0.1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.taotao7.hello-wallpaper";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Hello Wallpaper";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -298,9 +298,9 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1.8;
+				MARKETING_VERSION = 0.1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.taotao7.hello-wallpaper";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Hello Wallpaper";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;

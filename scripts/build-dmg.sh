@@ -32,7 +32,7 @@ cd "$PROJECT_DIR"
 xcodebuild -scheme "$APP_NAME" -configuration Release build -quiet
 
 # Find built app
-BUILT_APP=$(find ~/Library/Developer/Xcode/DerivedData -name "${APP_NAME}.app" -path "*/Release/*" -type d 2>/dev/null | head -1)
+BUILT_APP=$(find ~/Library/Developer/Xcode/DerivedData -name "Hello Wallpaper.app" -path "*/Release/*" -type d 2>/dev/null | head -1)
 
 if [ -z "$BUILT_APP" ]; then
     echo -e "${RED}Error: Could not find built app${NC}"
