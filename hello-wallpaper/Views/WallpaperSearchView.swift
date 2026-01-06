@@ -85,46 +85,41 @@ struct ExploreView: View {
     }
     
     private var headerView: some View {
-        HStack(spacing: 12) {
-            HStack {
-                Image(systemName: "magnifyingglass")
-                    .foregroundStyle(.secondary)
-                
-                TextField("Search wallpapers...", text: $searchText)
-                    .textFieldStyle(.plain)
-                    .onSubmit {
-                        Task {
-                            currentPage = 1
-                            wallpapers = []
-                            await loadWallpapers()
-                        }
+        HStack {
+            Image(systemName: "magnifyingglass")
+                .foregroundStyle(.secondary)
+            
+            TextField("Search wallpapers...", text: $searchText)
+                .textFieldStyle(.plain)
+                .onSubmit {
+                    Task {
+                        currentPage = 1
+                        wallpapers = []
+                        await loadWallpapers()
                     }
-                
-                if !searchText.isEmpty {
-                    Button {
-                        searchText = ""
-                        Task {
-                            currentPage = 1
-                            wallpapers = []
-                            await loadWallpapers()
-                        }
-                    } label: {
-                        Image(systemName: "xmark.circle.fill")
-                            .foregroundStyle(.secondary)
-                    }
-                    .buttonStyle(.plain)
                 }
+            
+            if !searchText.isEmpty {
+                Button {
+                    searchText = ""
+                    Task {
+                        currentPage = 1
+                        wallpapers = []
+                        await loadWallpapers()
+                    }
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundStyle(.secondary)
+                }
+                .buttonStyle(.plain)
             }
-            .padding(10)
-            .background(.background.opacity(0.8))
-            .clipShape(RoundedRectangle(cornerRadius: 10))
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.gray.opacity(0.2), lineWidth: 1)
-            )
         }
-        .padding(.horizontal, 20)
-        .padding(.vertical, 12)
+        .padding(8)
+        .background(.regularMaterial)
+        .clipShape(RoundedRectangle(cornerRadius: 8))
+        .padding(.horizontal, 16)
+        .padding(.top, 8)
+        .padding(.bottom, 4)
     }
     
     private var emptyView: some View {

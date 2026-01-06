@@ -45,3 +45,4 @@ Carthage/Checkouts/
 # Archives
 *.xcarchive
 .aider*
+dist/

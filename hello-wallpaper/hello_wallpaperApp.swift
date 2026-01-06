@@ -15,6 +15,7 @@ struct hello_wallpaperApp: App {
                 .frame(minWidth: 700, minHeight: 500)
         }
         .windowResizability(.contentSize)
+        .windowStyle(.hiddenTitleBar)
         
         MenuBarExtra("Hello Wallpaper", systemImage: "photo.on.rectangle") {
             MenuBarView()
@@ -32,8 +33,8 @@ struct MenuBarView: View {
         
         Divider()
         
-        Text("☀️ Light: \(lightWallpaperName)")
-        Text("🌙 Dark: \(darkWallpaperName)")
+        Text("Light: \(lightWallpaperName)")
+        Text("Dark: \(darkWallpaperName)")
         
         Divider()
         
